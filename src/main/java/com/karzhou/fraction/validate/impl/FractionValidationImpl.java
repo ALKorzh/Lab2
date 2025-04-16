@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 public class FractionValidationImpl implements FractionValidation {
     private static final Logger logger = LogManager.getLogger(FractionValidationImpl.logger);
 
+    @Override
     public boolean isValid(int numerator, int denominator) throws InvalidFractionException {
         if (denominator == 0) {
             logger.error("denominator is zero");

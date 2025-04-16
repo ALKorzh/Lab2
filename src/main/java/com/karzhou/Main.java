@@ -2,8 +2,8 @@ package com.karzhou;
 
 import com.karzhou.fraction.entity.Fraction;
 import com.karzhou.fraction.exception.validation.InvalidFractionException;
-import com.karzhou.fraction.parser.FractionParser;
-import com.karzhou.fraction.reader.FractionFileReader;
+import com.karzhou.fraction.parser.impl.FractionParserImpl;
+import com.karzhou.fraction.reader.impl.FractionFileReaderImpl;
 
 
 import java.io.IOException;
@@ -12,8 +12,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        FractionFileReader fileReader = new FractionFileReader();
-        FractionParser parser = new FractionParser();
+        FractionFileReaderImpl fileReader = new FractionFileReaderImpl();
+        FractionParserImpl parser = new FractionParserImpl();
 
         List<Fraction> fractions = new ArrayList<>();
         try {
