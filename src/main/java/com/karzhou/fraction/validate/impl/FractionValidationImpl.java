@@ -12,10 +12,9 @@ public class FractionValidationImpl implements FractionValidation {
     public boolean isValid(int numerator, int denominator) throws InvalidFractionException {
         if (denominator == 0) {
             logger.error("denominator is zero");
-            throw new InvalidFractionException("Denominator cannot be zero");
+            throw new InvalidFractionException("Denominator cannot be zero"); // without exception
         }
         return true;
-
 
     }
 

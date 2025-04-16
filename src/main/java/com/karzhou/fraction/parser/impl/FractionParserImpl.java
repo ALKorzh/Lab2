@@ -32,7 +32,7 @@ public class FractionParserImpl implements FractionParser {
             return new Fraction(numerator, denominator);
         } catch (NumberFormatException e) {
             logger.error("Invalid number format in fraction: {}", line, e);
-            throw new InvalidFractionException("Invalid number format in fraction: " + line, e);
+            throw new InvalidFractionException("Invalid number format in fraction: " + line, e); // do not throw exception
         } catch (InvalidFractionException e) {
             logger.error("Invalid fraction: {}", line, e);
             throw e;  // Rethrow to maintain original exception

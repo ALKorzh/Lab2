@@ -13,7 +13,7 @@ public class FractionFactoryImpl implements FractionFactory {
 
     @Override
     public Fraction createFraction(int numerator, int denominator) {
-        Fraction fraction = null;
+        Fraction fraction = null; // change to optional
 
         try {
             fractionValidation.isValid(numerator, denominator);
